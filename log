@@ -395,3 +395,16 @@ Tue Apr 14 11:53:24 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 d172647
+Tue Apr 14 11:59:07 PM UTC 2026: 
+ hashmap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:85:34: error: expected expression before ‘)’ token
+   85 |     if (map->buckets[posicion] !=){
+      |                                  ^
+hashmap.c:90:9: error: assignment to ‘HashMap *’ {aka ‘struct HashMap *’} from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+   90 |     map = createPair(key, value);
+      |         ^
+c9764d4
