@@ -234,3 +234,27 @@ hashmap.c:52:12: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
       |            ^~
 cc1: all warnings being treated as errors
 d4c78c3
+Tue Apr 14 11:28:14 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:51:53: error: expected expression before ‘Pair’
+   51 |     map->buckets = (Pair **)calloc(sizeof(capacity, Pair*));
+      |                                                     ^~~~
+hashmap.c:51:51: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   51 |     map->buckets = (Pair **)calloc(sizeof(capacity, Pair*));
+      |                                                   ^
+hashmap.c:51:29: error: too few arguments to function ‘calloc’
+   51 |     map->buckets = (Pair **)calloc(sizeof(capacity, Pair*));
+      |                             ^~~~~~
+In file included from test.c:2:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdlib.h:675:14: note: declared here
+  675 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+hashmap.c:52:12: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘Pair’
+   52 |     if (map->Pair == NULL)return NULL;
+      |            ^~
+cc1: all warnings being treated as errors
+652f129
