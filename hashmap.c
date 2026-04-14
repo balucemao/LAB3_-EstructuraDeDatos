@@ -46,10 +46,10 @@ int is_equal(void* key1, void* key2){
 
 HashMap * createMap(long capacity) {
     HashMap *map = (HashMap*)malloc(sizeof(HashMap));
-    if (map == NULL)return;
+    if (map == NULL)return NULL;
 
     map->Pair = (Pair **)calloc(sizeof(capacity, Pair*));
-    if (map->Pair == NULL)return;
+    if (map->Pair == NULL)return NULL;
     
     map->capacity = capacity;
     map->size = 0;
