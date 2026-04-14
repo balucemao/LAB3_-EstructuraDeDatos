@@ -1,0 +1,17 @@
+Tue Apr 14 11:18:47 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:48:44: error: expected expression before ‘)’ token
+   48 |     HashMap *map = (HashMap*)malloc(sizeof())
+      |                                            ^
+hashmap.c:48:14: error: unused variable ‘map’ [-Werror=unused-variable]
+   48 |     HashMap *map = (HashMap*)malloc(sizeof())
+      |              ^~~
+hashmap.c:50:1: error: control reaches end of non-void function [-Werror=return-type]
+   50 | }
+      | ^
+cc1: all warnings being treated as errors
+58bd8e3
