@@ -73,11 +73,12 @@ HashMap * createMap(long capacity) {
 void insertMap(HashMap * map, char * key, void * value) {
     //primero revisar si el elemento es correcto
     if (map == NULL || key == NULL)return;
+    
     long posicion = hash(key, map->capacity);
 
     //buscar donde insertar hasta que sea un nlugar sin dato
     while (map->buckets[posicion] != NULL || map->buckets[posicion]->key != NULL){
-        if (is_equal(map->buckets[posicion]->key, key));
+        if (is_equal(map->buckets[posicion]->key, key))return;
         posicion = (posicion+1) % map->capacity;
     }
 }
