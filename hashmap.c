@@ -77,7 +77,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
     //buscar donde insertar hasta que sea un nlugar sin dato
     while (map->buckets[posicion] != NULL || map->key != NULL){
-        if (is_equal(map->buckets->key, key));
+        if (is_equal(map->buckets[posicion]->key, key));
     }
 }
 
