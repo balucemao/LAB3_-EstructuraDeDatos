@@ -368,3 +368,8 @@ hashmap.c:79:49: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
    79 |     while (map->buckets[posicion] != NULL || map->key != NULL){
       |                                                 ^~
 261a9df
+Tue Apr 14 11:49:12 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+f094b50
