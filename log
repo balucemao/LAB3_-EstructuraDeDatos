@@ -32,3 +32,28 @@ hashmap.c:50:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 52769a3
+Tue Apr 14 11:22:32 PM UTC 2026: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:5: error: expected ‘,’ or ‘;’ before ‘if’
+   49 |     if (map == NULL)return;
+      |     ^~
+hashmap.c:51:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘Pair’
+   51 |     map->Pair = (Pai **)
+      |        ^~
+hashmap.c:51:18: error: ‘Pai’ undeclared (first use in this function); did you mean ‘Pair’?
+   51 |     map->Pair = (Pai **)
+      |                  ^~~
+      |                  Pair
+hashmap.c:51:18: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:51:24: error: expected expression before ‘)’ token
+   51 |     map->Pair = (Pai **)
+      |                        ^
+hashmap.c:54:1: error: control reaches end of non-void function [-Werror=return-type]
+   54 | }
+      | ^
+cc1: all warnings being treated as errors
+0479bca
