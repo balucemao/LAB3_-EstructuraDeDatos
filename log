@@ -313,3 +313,14 @@ hashmap.c:76:5: error: ‘posicion’ undeclared (first use in this function)
       |     ^~~~~~~~
 hashmap.c:76:5: note: each undeclared identifier is reported only once for each function it appears in
 9acd987
+Tue Apr 14 11:40:44 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:76:10: error: unused variable ‘posicion’ [-Werror=unused-variable]
+   76 |     long posicion = hash(key, map->capacity);
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+acb5246
