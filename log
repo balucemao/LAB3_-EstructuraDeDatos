@@ -324,3 +324,23 @@ hashmap.c:76:10: error: unused variable ‘posicion’ [-Werror=unused-variable]
       |          ^~~~~~~~
 cc1: all warnings being treated as errors
 acb5246
+Tue Apr 14 11:44:46 PM UTC 2026: 
+ hashmap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:79:15: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+   79 |     while (map->key == NULL){
+      |               ^~
+hashmap.c:80:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+   80 |         if (map->key == NULL){
+      |                ^~
+hashmap.c:81:23: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘key’
+   81 |             strcpy(map->key, key);
+      |                       ^~
+hashmap.c:76:10: error: unused variable ‘posicion’ [-Werror=unused-variable]
+   76 |     long posicion = hash(key, map->capacity);
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+9887536
