@@ -52,8 +52,8 @@ HashMap * createMap(long capacity) {
     if (map->Pair == NULL)return;
     
     map->capacity = capacity;
-    map->
-    map->
+    map->size = 0;
+    map->current = -1;
     
     return map;
 }
