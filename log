@@ -601,3 +601,23 @@ hashmap.c:184:57: error: request for member ‘value’ in something not a struc
   184 |         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
       |                                                         ^~
 3d2588e
+Wed Apr 15 11:30:17 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:175:5: error: unknown type name ‘Pain’; did you mean ‘Pair’?
+  175 |     Pain **oldBuckets = map->buckets;
+      |     ^~~~
+      |     Pair
+hashmap.c:175:25: error: initialization of ‘int **’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  175 |     Pain **oldBuckets = map->buckets;
+      |                         ^~~
+hashmap.c:184:37: error: request for member ‘key’ in something not a structure or union
+  184 |         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                     ^~
+hashmap.c:184:57: error: request for member ‘value’ in something not a structure or union
+  184 |         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                         ^~
+5050da8

@@ -183,7 +183,7 @@ void enlarge(HashMap * map) {
     for (long i = 0; i < oldCapacity; i++){
         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
     }
-
+    free(oldBuckets);
 }
 
 
