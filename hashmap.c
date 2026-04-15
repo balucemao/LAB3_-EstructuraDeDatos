@@ -77,7 +77,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     long posicion = hash(key, map->capacity);
 
     //buscar donde insertar hasta que sea un nlugar sin dato
-    while (map->buckets[posicion] != NULL || map->buckets[posicion]->key != NULL){
+    while (map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
         if (is_equal(map->buckets[posicion]->key, key))return;
         posicion = (posicion+1) % map->capacity;
     }
