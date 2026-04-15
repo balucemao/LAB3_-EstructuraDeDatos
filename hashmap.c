@@ -171,7 +171,12 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+    if (map == NULL)return;
+    Pain **oldBuckets = map->buckets;
+    long oldCapacity = map->capacity;
 
+    map->capacity *= 2;
+    
 
 }
 

@@ -560,3 +560,24 @@ Wed Apr 15 11:25:26 PM UTC 2026:
  tests:  16|1
 total_score: 50/60
 6ee5a92
+Wed Apr 15 11:27:30 PM UTC 2026: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:175:5: error: unknown type name ‘Pain’; did you mean ‘Pair’?
+  175 |     Pain **oldBuckets = map->buckets;
+      |     ^~~~
+      |     Pair
+hashmap.c:175:25: error: initialization of ‘int **’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  175 |     Pain **oldBuckets = map->buckets;
+      |                         ^~~
+hashmap.c:176:10: error: unused variable ‘oldCapacity’ [-Werror=unused-variable]
+  176 |     long oldCapacity = map->capacity;
+      |          ^~~~~~~~~~~
+hashmap.c:175:12: error: unused variable ‘oldBuckets’ [-Werror=unused-variable]
+  175 |     Pain **oldBuckets = map->buckets;
+      |            ^~~~~~~~~~
+cc1: all warnings being treated as errors
+3060621
