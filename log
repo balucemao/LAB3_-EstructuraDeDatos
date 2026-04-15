@@ -434,3 +434,15 @@ Wed Apr 15 12:06:33 AM UTC 2026:
  tests:  4|5
 total_score: 15/60
 894d00f
+Wed Apr 15 12:08:56 AM UTC 2026: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:77:45: error: ‘enlargeMap’ undeclared (first use in this function); did you mean ‘enlarge’?
+   77 |     if ((map->size / map->capacity) >= 0.7) enlargeMap;
+      |                                             ^~~~~~~~~~
+      |                                             enlarge
+hashmap.c:77:45: note: each undeclared identifier is reported only once for each function it appears in
+4031624
