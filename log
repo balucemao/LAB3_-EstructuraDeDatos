@@ -647,3 +647,13 @@ hashmap.c:184:114: error: request for member ‘value’ in something not a stru
   184 |         if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
       |                                                                                                                  ^~
 20edebb
+Wed Apr 15 11:33:44 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:183:37: error: invalid type argument of ‘->’ (have ‘long int’)
+  183 |     for (long i = 0; i < oldCapacity->key; i++){
+      |                                     ^~
+f9612d8
