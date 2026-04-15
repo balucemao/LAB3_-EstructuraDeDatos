@@ -104,12 +104,13 @@ Pair * searchMap(HashMap * map,  char * key) {
     if (map == NULL || key == NULL)return NULL;
     long posicion = hash(key, map->capacity);
 
+    //se recorre hasta encontrar la clave o null
     while(map->buckets[posicion] != NULL){
         if (map->buckets[posicion]->key != NULL && is_equal(map->buckets[posicion]->key, key)){
             map->current = posicion;
             return map->buckets[posicion];
         }
-        posicion = (posicion + 1) % map->capacity;
+        posicion = (posicion + 1) % map->capacity; //por si hay colision, recordar es circular
     }
     return NULL;
 }
@@ -121,7 +122,12 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
-
+    if (map == NULL || key == NULL)return;
+    Pair *pair = searchMap(map, key);
+    if (pair != NULL){
+        pair->key = NULL;
+        map->size -= 1;
+    }
 
 }
 
