@@ -180,7 +180,7 @@ void enlarge(HashMap * map) {
 
     map->size = 0;
 
-    for (long i = 0; i < oldCapacity->key; i++){
+    for (long i = 0; i < oldCapacity; i++){
         if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
     }
     free(oldBuckets);

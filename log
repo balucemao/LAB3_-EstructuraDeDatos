@@ -657,3 +657,9 @@ hashmap.c:183:37: error: invalid type argument of ‘->’ (have ‘long int’)
   183 |     for (long i = 0; i < oldCapacity->key; i++){
       |                                     ^~
 f9612d8
+Wed Apr 15 11:34:19 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 60/60
+194c854
