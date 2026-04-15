@@ -74,7 +74,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     //primero revisar si el elemento es correcto
     if (map == NULL || key == NULL)return;
 
-    if ((map->size / map->capacity) >= 0.7) enlargeMap;
+    if ((map->size / map->capacity) >= 0.7) enlarge(Map);
     
     long posicion = hash(key, map->capacity);
 
