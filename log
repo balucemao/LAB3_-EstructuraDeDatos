@@ -621,3 +621,29 @@ hashmap.c:184:57: error: request for member ‘value’ in something not a struc
   184 |         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
       |                                                         ^~
 5050da8
+Wed Apr 15 11:33:02 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:175:5: error: unknown type name ‘Pain’; did you mean ‘Pair’?
+  175 |     Pain **oldBuckets = map->buckets;
+      |     ^~~~
+      |     Pair
+hashmap.c:175:25: error: initialization of ‘int **’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  175 |     Pain **oldBuckets = map->buckets;
+      |                         ^~~
+hashmap.c:183:37: error: invalid type argument of ‘->’ (have ‘long int’)
+  183 |     for (long i = 0; i < oldCapacity->key; i++){
+      |                                     ^~
+hashmap.c:184:51: error: request for member ‘key’ in something not a structure or union
+  184 |         if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                   ^~
+hashmap.c:184:94: error: request for member ‘key’ in something not a structure or union
+  184 |         if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                                                              ^~
+hashmap.c:184:114: error: request for member ‘value’ in something not a structure or union
+  184 |         if (oldBuckets[i] != NULL && oldBuckets[i]->key != NULL) insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                                                                                  ^~
+20edebb
