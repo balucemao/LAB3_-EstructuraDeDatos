@@ -476,3 +476,14 @@ Wed Apr 15 11:01:23 PM UTC 2026:
  tests:  5|4
 total_score: 20/60
 bfa5335
+Wed Apr 15 11:02:59 PM UTC 2026: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:105:10: error: unused variable ‘posicion’ [-Werror=unused-variable]
+  105 |     long posicion = hash(key, map->capacity);
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+b2e5f62
