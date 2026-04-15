@@ -128,7 +128,7 @@ void eraseMap(HashMap * map,  char * key) {
         pair->key = NULL;
         map->size -= 1;
     }
-    return NULL;
+    return;
 }
 
 // 5. Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer Pair válido del arreglo buckets. 
