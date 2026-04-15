@@ -176,7 +176,13 @@ void enlarge(HashMap * map) {
     long oldCapacity = map->capacity;
 
     map->capacity *= 2;
-    
+    map->buckets = (Pair**)calloc(map->capacity, sizeof(Pair*));
+
+    map->size = 0;
+
+    for (long i = 0; i < oldCapacity; i++){
+        insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+    }
 
 }
 

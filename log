@@ -581,3 +581,23 @@ hashmap.c:175:12: error: unused variable ‘oldBuckets’ [-Werror=unused-variab
       |            ^~~~~~~~~~
 cc1: all warnings being treated as errors
 3060621
+Wed Apr 15 11:29:50 PM UTC 2026: 
+ hashmap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:175:5: error: unknown type name ‘Pain’; did you mean ‘Pair’?
+  175 |     Pain **oldBuckets = map->buckets;
+      |     ^~~~
+      |     Pair
+hashmap.c:175:25: error: initialization of ‘int **’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  175 |     Pain **oldBuckets = map->buckets;
+      |                         ^~~
+hashmap.c:184:37: error: request for member ‘key’ in something not a structure or union
+  184 |         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                     ^~
+hashmap.c:184:57: error: request for member ‘value’ in something not a structure or union
+  184 |         insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                         ^~
+3d2588e
