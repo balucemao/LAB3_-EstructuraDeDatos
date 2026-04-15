@@ -408,3 +408,13 @@ hashmap.c:90:9: error: assignment to ‘HashMap *’ {aka ‘struct HashMap *’
    90 |     map = createPair(key, value);
       |         ^
 c9764d4
+Wed Apr 15 12:00:15 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:85:34: error: expected expression before ‘)’ token
+   85 |     if (map->buckets[posicion] !=){
+      |                                  ^
+70c0d5b
