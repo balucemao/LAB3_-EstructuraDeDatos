@@ -669,3 +669,17 @@ Thu Apr 16 05:18:40 PM UTC 2026:
  tests:  17|0
 total_score: 60/60
 982a41b
+Thu Apr 16 05:27:19 PM UTC 2026: 
+ hashmap.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:89:21: error: statement with no effect [-Werror=unused-value]
+   89 |         map->buckets[posicion];
+      |         ~~~~~~~~~~~~^~~~~~~~~~
+hashmap.c:90:21: error: statement with no effect [-Werror=unused-value]
+   90 |         map->buckets[posicion];
+      |         ~~~~~~~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+6d61951

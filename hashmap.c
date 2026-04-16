@@ -78,17 +78,20 @@ void insertMap(HashMap * map, char * key, void * value) {
 
     //buscar donde insertar hasta que sea un nlugar sin dato
     while (map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
+        //si antes de encontrar un null se encuentra la clave entonces se retorna
         if (is_equal(map->buckets[posicion]->key, key))return;
+        //se avance circularmente
         posicion = (posicion+1) % map->capacity;
     }
-
-    if (map->buckets[posicion] != NULL){
-        map->buckets[posicion]->key = key;
-        map->buckets[posicion]->value = value;
+    //si se encuentra una posicion valida == NULL
+    if (map->buckets[posicion] == NULL) map->buckets[posicion] = createPair(key, value);
+    else {
+        map->buckets[posicion];
+        map->buckets[posicion];
     }
 
-    map->buckets[posicion] = createPair(key, value);
     map->size++;
+    map->current = posicion;
 }
 
 // 3. Implemente la función Pair * searchMap(HashMap * map, char * key), la cual retorna el Pair asociado a la clave ingresada. 
