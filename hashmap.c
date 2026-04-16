@@ -107,8 +107,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long posicion = hash(key, map->capacity);
 
     //se recorre hasta encontrar la clave o null
-    while(map->buckets[posicion] != NULL){
-        if (map->buckets[posicion] == NULL)return NULL;
+    while(map->buckets[posicion] != NULL){  
         if (map->buckets[posicion]->key != NULL && is_equal(map->buckets[posicion]->key, key)){
             map->current = posicion;
             return map->buckets[posicion];
@@ -139,7 +138,7 @@ void eraseMap(HashMap * map,  char * key) {
 // Recuerde actualizar el índice.
 
 Pair * firstMap(HashMap * map) {
-    //if (map == NULL)return NULL;
+    if (map == NULL)return NULL;
     for (long i = 0; i < map->capacity; i++){
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
             map->current = i;
