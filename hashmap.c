@@ -85,6 +85,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
     //si se encuentra una posicion valida == NULL
     if (map->buckets[posicion] == NULL) map->buckets[posicion] = createPair(key, value);
+    //si existe una posicion pero sin nada dentro
     else {
         map->buckets[posicion]->value = value;
         map->buckets[posicion]->key = key;
@@ -107,6 +108,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     //se recorre hasta encontrar la clave o null
     while(map->buckets[posicion] != NULL){
+        if (map->buckets[posicion] == NULL)return NULL;
         if (map->buckets[posicion]->key != NULL && is_equal(map->buckets[posicion]->key, key)){
             map->current = posicion;
             return map->buckets[posicion];
