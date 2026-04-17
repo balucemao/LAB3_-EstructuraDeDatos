@@ -108,7 +108,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     //se recorre hasta encontrar la clave o casilla nula
     while(map->buckets[posicion] != NULL){  
-        if (map->buckets[posicion]->key != NULL && is_equal(map->buckets[posicion]->key, key)){
+        if (is_equal(map->buckets[posicion]->key, key)){
             map->current = posicion;
             return map->buckets[posicion];
         }
