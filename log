@@ -723,3 +723,16 @@ Sun Apr 19 01:31:05 PM UTC 2026:
  tests:  17|0
 total_score: 60/60
 01b68ff
+Sun Apr 19 01:35:12 PM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:187:28: error: expected ‘;’ before ‘}’ token
+  187 |         free(oldBuckets[i])
+      |                            ^
+      |                            ;
+  188 |     }
+      |     ~                       
+2bb80e2
